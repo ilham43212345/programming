@@ -40,14 +40,13 @@ std::string binhexbyzn(int a, int base) {
  * @param base - система счисления в которую переводим исходное число 
  * @param res - переменная для ссылки на переменную с результатом 
  * @return std::string - представление числа a в base системе счисления
-
-
  */
 std::string binhexbysl(int a, int base, std::string& res) {
     res = "";
     res = binhex(a, base) + res;
     return res;
 }
+
 /**
  * @brief функция перевода число в другую систему счисления (по указателю)
  * 
@@ -70,7 +69,6 @@ std::string binhexbyuk(int a, int base, std::string* res) {
  * @param len - длина битового представления числа
  * @param base - система счисления в которую переводим число
  */
-
 void byte_1(uint8_t* a, int len, int base){
     for(int i = len - 1; i >= 0; i--){
         std::cout << binhex((uint8_t) a[i], base) << "|";
